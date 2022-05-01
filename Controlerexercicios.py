@@ -2,6 +2,7 @@ import Modelexercicios
 import this
 
 opcao = 0
+this.idade = 0
 
 def Menu():
     print('Exercicios em Python\n'
@@ -16,12 +17,23 @@ def Menu():
 def Escolha():
     Menu() #Chamando o método menu, para mostra-lo
     if(this.opcao == 1):
-        print(Modelexercicios.troca())
+        print(Modelexercicios.Troca())
     elif(this.opcao == 2):
-        print(Modelexercicios.sub())
+        print(Modelexercicios.Sub())
     elif(this.opcao == 3):
-        print(Modelexercicios.retangulo())
+        print(Modelexercicios.Retangulo())
     elif(this.opcao == 4):
-        print(Modelexercicios.idade())
+        #Coletar()
+        #print('Informe sua idade: ')
+        print(Modelexercicios.Idade()) #(this.idade, this.meses, this.dias)
+    elif(this.opcao == 5):
+        print(Modelexercicios.Votos())
     else:
         print('Número invalido')
+
+#def Coletar():
+#    this.idade = print('Informe sua idade: ')
+#    this.idade = int(input())
+#    this.meses = this.idade
+#    this.dias = this.idade
+
