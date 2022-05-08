@@ -1,4 +1,6 @@
 import this
+this.final = 0
+
 
 def Troca(a, b):
 
@@ -13,7 +15,7 @@ def Troca(a, b):
     #return 'Novo valor de A é: {}, novo valor de B é: {}'.format(a, b)
 
 def Sub(num1):
-    return num1 -1
+    return num1 - 1
     #result = num1 - 1
     #return 'O número antecessor de {} é {}'.format(num1, result)
 
@@ -32,9 +34,7 @@ def Retangulo(base, altura):
 def Idade(idade, meses, dias):
     meses = idade * 30
     dias = idade * 365
-    return 'Você tem {}.\n' \
-           'Você tem {} em meses.\n' \
-           'Você tem {} em dias'.format(idade, meses, dias)
+    return 'Você tem {} anos.\n Você tem {} em meses.\n Você tem {} em dias'.format(idade, meses, dias)
     #idade = int(input('Digite sua idade: '))
     #meses = idade * 12
     #dias = idade * 365
@@ -48,9 +48,20 @@ def Idade(idade, meses, dias):
            #'Você tem {} minutos de vida'.format(idade, meses, dias, horas, minutos)
 
 def Eleitores(eleitores, brancos, nulos, validos): # Ajuda
-    eleitores = eleitores
-    brancos = eleitores % 100
-    nulos = (eleitores - brancos) % 100
-    validos = (eleitores - brancos - nulos ) % 100
+    brancos = 100 * (this.brancos / eleitores)
+    nulos = 100 * (this.nulos / eleitores)
+    validos = 100 * (this.validos / eleitores)
 
-    return eleitores, brancos, nulos, validos
+
+    return '{:.2f}% De eleitores votaram branco.\n{:.2f}% De eleitores votaram nulo.\n{:.2f}% São validos.'.format(brancos, nulos, validos)
+
+def Salario(salario, reajustado):
+    this.final = (this.salario * this.reajustado) + this.salario
+    return 'O novo salário é: {} R$ e o reajuste foi {}%'.format(this.final, this.reajustado)
+
+def Carro(carro, distribuidor, imposto):
+    carro = 0
+    distribuidor = this.carro * (28 / 100)
+    imposto = carro - this.distribuidor * (45 / 100)
+
+    return imposto + distribuidor + carro
