@@ -22,7 +22,9 @@ def Menu():
           '5. Ver os eleitores\n'
           '6. Ler o salário reajustado\n'
           '7. Valor do carro\n'
-          '8. ')
+          '8. Media do aluno\n'
+          '9. Maças\n'
+          '10. ')
     this.opcao = int(input())
 
 
@@ -50,6 +52,12 @@ def Escolha():
     elif (this.opcao == 7):
         Carro()
         print(Modelexercicios.Carro(this.carro, this.distribuidor, this.imposto))
+    elif (this.opcao == 8):
+        Nota()
+        print(Modelexercicios.Nota(this.nota1, this.nota2, this.nota3, this.media))
+    elif (this.opcao):
+        Fruta()
+        print(Modelexercicios.Fruta(this.duzia))
     else:
         print('Número invalido')
 
@@ -98,3 +106,15 @@ def Salario():
 def Carro():
     print('O valor do carro é')
     this.carro = int(input())
+
+def Nota():
+    print('A primeira nota do aluno: ')
+    this.nota1 = float(input())
+    print('Segunda nota do aluno: ')
+    this.nota2 = float(input())
+    print('A terceira nota do aluno: ')
+    this.nota3 = float(input())
+
+def Fruta():
+    print('Quantas maças você quer comprar?')
+    this.duzia = int(input())

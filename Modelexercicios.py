@@ -1,6 +1,9 @@
 import this
 this.final = 0
-
+this.distribuidor = 0
+this.imposto = 0
+this.media = 0
+this.duzia = 0
 
 def Troca(a, b):
 
@@ -64,4 +67,24 @@ def Carro(carro, distribuidor, imposto):
     distribuidor = this.carro * (28 / 100)
     imposto = carro - this.distribuidor * (45 / 100)
 
-    return imposto + distribuidor + carro
+    return 'Este é o custo final do carro {}'.format(imposto + distribuidor + carro)
+
+def Nota(nota1, nota2, nota3, media):
+    nota1 = nota1
+    nota2 = nota2
+    nota3 = nota3
+    media = (nota1 + nota2 + nota3) / 3
+
+    if(media >= 6):
+        print('O aluno teve a nota de {:.2f} e passou de ano.'.format(media))
+    else:
+        print('O aluno teve a nota de {:.2f} e repetiu de ano'.format(media))
+
+def Fruta(duzia):
+    duzia = this.duzia
+
+
+    if(duzia >= 12):
+        print('Você comprou {} maças e o valor ficou {} Reais.'.format(duzia, duzia * 1.00))
+    elif(duzia <= 11):
+        print('Você comprou {} maçãs e o valor ficou {} Reais.'.format(duzia, duzia * 1.30))
